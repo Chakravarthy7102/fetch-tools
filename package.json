@@ -1,0 +1,14 @@
+{
+  "name": "fetch-tools",
+  "version": "1.0.0",
+  "description": "react hooks for managing api request state",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chakravarthi medicharla",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
