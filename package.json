@@ -1,7 +1,7 @@
 {
-	"name": "fetch-tools",
-	"version": "1.0.0",
-	"description": "react hooks for managing api request state",
+	"name": "react-fetch-tools",
+	"version": "0.1.0",
+	"description": "React hooks for managing http request state",
 	"main": "dist/index.js",
 	"exports": {
 		"./package.json": "./package.json",
@@ -12,7 +12,8 @@
 		}
 	},
 	"files": [
-		"dist"
+		"dist",
+		"esm"
 	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
