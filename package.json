@@ -1,17 +1,46 @@
 {
-  "name": "fetch-tools",
-  "version": "1.0.0",
-  "description": "react hooks for managing api request state",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "chakravarthi medicharla",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.21"
-  }
+	"name": "fetch-tools",
+	"version": "1.0.0",
+	"description": "react hooks for managing api request state",
+	"main": "dist/index.js",
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./esm/index.js",
+			"require": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build:esm": "tsc --target es2018 --outDir esm",
+		"build:cjs": "tsc --target es2015 --module commonjs --outDir dist",
+		"build": "rm -rf ./dist && rm -rf ./esm && npm run build:esm && npm run build:cjs"
+	},
+	"author": "chakravarthi medicharla",
+	"license": "ISC",
+	"dependencies": {
+		"react": "^18.2.0"
+	},
+	"bugs": {
+		"url": "https://github.com/Chakravarthy7102/fetch-tools/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chakravarthy7102/fetch-tools.git"
+	},
+	"homepage": "https://github.com/Chakravarthy7102/fetch-tools#readme",
+	"devDependencies": {
+		"@types/react": "^18.2.21",
+		"typescript": "^5.2.2"
+	},
+	"engines": {
+		"node": ">=10"
+	},
+	"peerDependencies": {
+		"react": ">=16"
+	}
 }
